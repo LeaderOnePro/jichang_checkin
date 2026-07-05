@@ -6,7 +6,7 @@
 
 - 每天定时签到，获取额外流量奖励
 - **双模式登录**：Cookie 模式（推荐） 或 邮箱/密码模式
-- **可选 Server酱 推送**：签到结果微信通知
+- **可选 Server酱 推送**：签到结果IM通知
 - 支持多账号批量签到
 - 失败自动重试（最多 3 次，带指数退避）
 
@@ -71,19 +71,9 @@ PHPSESSID=abc; uid=1; key=xxx|||PHPSESSID=def; uid=2; key=yyy
 
 ## 结果通知
 
-签到成功 / 失败都会通过 Server酱推送到微信（仅当填写了 `SCKEY` 时生效）。
+签到成功 / 失败都会通过 Server酱推送到IM（仅当填写了 `SCKEY` 时生效）。
 
 Server酱注册：<https://sct.ftqq.com>
-
-## 目录结构
-
-```
-.
-├── .github/workflows/main.yml   # GitHub Actions 配置
-├── main.py                      # 签到脚本
-├── requirements.txt             # Python 依赖
-└── README.md                    # 本文件
-```
 
 ## License
 
