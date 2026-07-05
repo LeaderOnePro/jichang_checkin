@@ -11,8 +11,16 @@ config = os.environ.get('CONFIG', '')
 cookie_str = os.environ.get('COOKIE', '')
 SCKEY = os.environ.get('SCKEY', '')
 
-login_url = '{}/auth/login'.format(url)
-check_url = '{}/user/checkin'.format(url)
+login_url = f'{url}/auth/login'
+check_url = f'{url}/user/checkin'
+
+# Re-export for callers / tests
+__all__ = [
+    'sign',
+    'sign_with_cookie',
+    'parse_cookie_string',
+    'send_notification',
+]
 
 
 # ── Cookie parsing ───────────────────────────────────────────────────────────
